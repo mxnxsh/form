@@ -1,0 +1,128 @@
+body{
+    background-color: yellow;
+}
+h1{
+    color: black;
+}
+p{
+    color: grey;
+    font-size: 1.2rem;
+}
+li
+{
+    color: grey;
+    font-size: 1.2rem;
+}
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-toggler
+{
+    outline: none !important;
+}
+.navbar-brand
+{
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+.nav-link
+{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    transition: all 1s ease-in;
+}
+.nav-link:hover{
+    color: #007892;
+}
+/* header */
+.max-height
+{
+  min-height: 100vh;
+  position: relative;
+  background-color: #007892 ;
+}
+.ml4 {
+    position: relative;
+    font-weight: 900;
+    font-size: 4.5em;
+}
+.ml4 .letters {
+    position: absolute;
+    /* margin: auto; */
+    left: 0;
+    top: 0.3em;
+    right: 0;
+    opacity: 0; 
+    color: whitesmoke;
+}
+/* end of header */
+
+/* card */
+.card-content
+{
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.card-content:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* end of card */
+
+/* testimonial */
+.car-container
+{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+/* end  of testimonials */
+
+/* compose */
+/* .container-form
+{
+    transform: translate(100px,100px);
+} */
+form
+{
+    width: auto;
+}
+/* end of compose */
+.middle{
+    position: absolute;
+    left:40%;
+    top: 50%;
+    font-weight: 700;
+}
+/* footer */
+.footer {
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	background-color: #007892;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: whitesmoke;
+} 
+/* end of footer */
+.heading{
+    transform: translateY(-50%);
+}
+.branding{
+    position: absolute;
+    left:5%;
+    top:0;
+    height: px;
+}
+

@@ -3,10 +3,13 @@ var bodyParser = require("body-parser");
 var path = require("path");
 var ejs = require("ejs");
 var mongoose = require("mongoose");
+var md5 = require('md5');
 
+
+var Post = require("./models/post");
 
 // Connect to db
-mongoose.connect("mongodb://localhost:27017/merge", {
+mongoose.connect("mongodb+srv://admin-manish:kingisback123@cluster0-tm1kx.mongodb.net/merge", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -27,16 +30,43 @@ app.set("view engine","ejs");
 app.use(express.static(path.join(__dirname,"public")));
 
 // Body Parser middleware
-// 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
-//Set routes
+// //Set routes
 var user = require("./routes/user.js");
+
 app.use("/",user);
 
+app.get("/compose",function(req,res)
+{
+  res.render("compose");
+});
 
+app.get("/blog",function(req,res)
+{
+Post.find({},function(err,posts){
+    res.render("blog", {
+    posts: posts
+    });
+  });
+});
+
+app.post("/compose",function(req,res)
+{
+  const post = new Post ({
+    postTitle: req.body.postTitle,
+    postBody: req.body.postBody,
+    quizLink:req.body.quizLink
+  });
+  post.save(function(err){
+    if (!err){
+        res.redirect("/blog");
+    }
+});
+});
+  
 app.listen(3000,function(){
 	console.log("Server is running successfully");
 });

@@ -1,11 +1,8 @@
 var mongoose = require("mongoose");
 
+
 var UserSchema = mongoose.Schema({
-	fname:{
-		type:String,
-		required:true
-	},
-	lname:{
+	name:{
 		type:String,
 		required:true
 	},
@@ -13,10 +10,12 @@ var UserSchema = mongoose.Schema({
 		type:String,
 		required:true
 	},
+	phoneNumber:{
+		type:Number
+	},
 	password:{
 		type:String,
 		required:true
-	}
+	}	
 });
-
 var User = module.exports = mongoose.model("user",UserSchema);

@@ -1,74 +1,63 @@
   <%- include('partials/header'); -%>
-
-	<form>
-  <div class="form-group row">
-    <label class="col-sm-2 col-form-label">Qualification</label></div>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" placeholder="10 score"></br>
-      <input type="text" class="form-control" placeholder="12 score"></div></br>
-    </div>
+  <div class="container">
+<form method="post" action="/userform">
+  <div class="form-group">
+    <label>10th marks</label>
+    <input type="text" class="form-control" id="" placeholder="Score" name="tenthmarks">
+  </div>
+  <div class="form-group">
+    <label>12th marks</label>
+    <input type="text" class="form-control" id="" placeholder="Score" name="twelvethmarks">
   </div>
   <fieldset class="form-group">
     <div class="row">
-      <legend class="col-form-label col-sm-2 pt-0">Qualification</legend>
+      <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
       <div class="col-sm-10">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="" value="option1" >
-          <label class="form-check-label">
-          	Graduation
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Graduation" checked>
+          <label class="form-check-label" for="gridRadios1">
+            Graduation
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="" value="option2" >
-          <label class="form-check-label">
-          	Post Graduation
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Postgraduation">
+          <label class="form-check-label" for="gridRadios2">
+            Postgraduation
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="" value="option3" >
-          <label class="form-check-label">
-          	Phd
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="PHD">
+          <label class="form-check-label" for="gridRadios3">
+            PHD
           </label>
         </div>
       </div>
     </div>
   </fieldset>
-<div class="form-group row">
-    <label class="col-sm-2 col-form-label">Previous or current job details</label></div>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" placeholder="job details"></br>
-    </div>
+  <div class="form-group">
+    <label>Job details</label>
+    <input type="text" class="form-control" id="" placeholder="Any job details" name="jobDetails">
   </div>
-  <div class="form-group row">
-    <label class="col-sm-2 col-form-label">Internship</label></div>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" placeholder="Internship"></br>
-    </div>
+  <div class="form-group">
+    <label>Internship</label>
+    <input type="text" class="form-control" id="" placeholder="Internship" name="internship">
   </div>
-  <div class="form-group row">
-    <label class="col-sm-2 col-form-label">Position of responsibilities</label></div>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" placeholder="Position"></br>
-    </div>
+  <div class="form-group">
+    <label>Position of responsibilities</label>
+    <input type="text" class="form-control" id="" placeholder="Position of responsibilities" name="position">
   </div>
-  <div class="form-group row">
-    <label class="col-sm-2 col-form-label">Training of details</label></div>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" ></br>
-    </div>
+  <div class="form-group">
+    <label>Training Details</label>
+    <input type="text" class="form-control" id="" placeholder="Project details" name="trainingDetail">
   </div>
-  <div class="form-group row">
-    <label class="col-sm-2 col-form-label">Previous project details</label></div>
-    <div class="col-sm-10">
-      <input type="text" class="form-control"></br>
-    </div>
+  <div class="form-group">
+    <label>Previous project details</label>
+    <input type="text" class="form-control" id="" placeholder="Project details" name="projectDetails">
   </div>
-  <div class="form-group row">
-    <label class="col-sm-2 col-form-label">Addition details</label></div>
-    <div class="col-sm-10">
-      <textarea type="text" class="form-control" rows="4" cols="4"></textarea></br>
-    </div>
+  <div class="form-group">
+    <label>Small Description</label>
+    <textarea type="text" class="form-control" id="" rows="5" cols="5" placeholder="Tell us about self" name="additionalDetail"></textarea>
   </div>
-</form>
-</div>
+    <input type="hidden" name="userArray" value="<%=userArrayStore%>"></input>
+  <button type="submit" class="btn btn-primary">Submit</button>
   <%- include('partials/footer'); -%>
