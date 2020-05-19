@@ -114,3 +114,8 @@ dist
 .yarn/unplugged
 .yarn/build-state.yml
 .pnp.*
+
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
