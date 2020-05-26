@@ -1,74 +1,70 @@
-
-<%- include("partials/header.ejs") %> 
-<section id="header1">
-  <div class="container-fluid my-5">
-    <!-- <div class="row justify-content-center align-items-center">
+<%- include("partials/header.ejs") %>
+    <section id="header1">
+        <div class="container-fluid my-5">
+            <!-- <div class="row justify-content-center align-items-center">
       <div class="col-10  col-lg-6  text-center mx-auto text-capitalize">
         <h1 class="text-capitalize">hiring gets easy with merge</h1>
         <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolores illum alias id atque. Numquam harum aliquam provident aspernatur culpa.</p>
       </div> -->
-      <div class="col-10 col-lg-6 mx-auto text-capitalize login">
-        <form method="post" onsubmit="return validation()" action="/register">
-          <div class="form-group">
-            <label>Name</label>
-            <input type="text" class="form-control" name="name" placeholder="Enter Your Name" required>
-          </div>
-          <div class="form-group">
-            <label>Mobile Number</label>
-            <input type="number" class="form-control" name="number" id="mobileNumber" placeholder="Enter Your Mobile No"required>
-            <span id="mobileno" class="text-danger font-weight-bold"> </span>
-          </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" class="form-control" name="email" id="emails" placeholder="Enter Your Email" required>
-            <span id="emailids" class="text-danger font-weight-bold"> </span>
-          </div>
-          <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control" name="password" placeholder="Enter Password"required>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-<script type="text/javascript">
-    
-
-    function validation(){
+            <div class="col-10 col-lg-6 mx-auto text-capitalize login">
+                <form method="post" onsubmit="return validation()" action="/register">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="Enter Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="number" class="form-control" name="number" id="mobileNumber" placeholder="Enter Your Mobile No" required>
+                        <span id="mobileno" class="text-danger font-weight-bold"> </span>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email" id="emails" placeholder="Enter Your Email" required>
+                        <span id="emailids" class="text-danger font-weight-bold"> </span>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Enter Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send OTP</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        function validation() {
 
 
-      var mobileNumber = document.getElementById('mobileNumber').value;
-      var emails = document.getElementById('emails').value;
+            var mobileNumber = document.getElementById('mobileNumber').value;
+            var emails = document.getElementById('emails').value;
 
-      if(mobileNumber == ""){
-        document.getElementById('mobileno').innerHTML =" ** Please fill the mobile NUmber field";
-        return false;
-      }
-      if(isNaN(mobileNumber)){
-        document.getElementById('mobileno').innerHTML =" ** user must write digits only not characters";
-        return false;
-      }
-      if(mobileNumber.length!=10){
-        document.getElementById('mobileno').innerHTML =" ** Mobile Number must be 10 digits only";
-        return false;
-      }
+            if (mobileNumber == "") {
+                document.getElementById('mobileno').innerHTML = " ** Please fill the mobile NUmber field";
+                return false;
+            }
+            if (isNaN(mobileNumber)) {
+                document.getElementById('mobileno').innerHTML = " ** user must write digits only not characters";
+                return false;
+            }
+            if (mobileNumber.length != 10) {
+                document.getElementById('mobileno').innerHTML = " ** Mobile Number must be 10 digits only";
+                return false;
+            }
 
-      if(emails == ""){
-        document.getElementById('emailids').innerHTML =" ** Please fill the email idx` field";
-        return false;
-      }
-      if(emails.indexOf('@') <= 0 ){
-        document.getElementById('emailids').innerHTML =" ** @ Invalid Position";
-        return false;
-      }
+            if (emails == "") {
+                document.getElementById('emailids').innerHTML = " ** Please fill the email idx` field";
+                return false;
+            }
+            if (emails.indexOf('@') <= 0) {
+                document.getElementById('emailids').innerHTML = " ** @ Invalid Position";
+                return false;
+            }
 
-      if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')){
-        document.getElementById('emailids').innerHTML =" ** . Invalid Position";
-        return false;
-      }
-    }
-
-  </script>
-<%- include("partials/footer.ejs") %> 
+            if ((emails.charAt(emails.length - 4) != '.') && (emails.charAt(emails.length - 3) != '.')) {
+                document.getElementById('emailids').innerHTML = " ** . Invalid Position";
+                return false;
+            }
+        }
+    </script>
+    <%- include("partials/footer.ejs") %>

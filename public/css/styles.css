@@ -1,128 +1,808 @@
-body{
-    background-color: yellow;
-}
-h1{
-    color: black;
-}
-p{
-    color: grey;
-    font-size: 1.2rem;
-}
-li
-{
-    color: grey;
-    font-size: 1.2rem;
-}
-
-.navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
-}
-.navbar-toggler
-{
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
     outline: none !important;
 }
-.navbar-brand
-{
-    color: black;
-    font-size: 1.2rem;
-    font-weight: bolder;
-}
-.nav-link
-{
-    font-size: 1.2rem;
-    font-weight: bolder;
-    transition: all 1s ease-in;
-}
-.nav-link:hover{
-    color: #007892;
-}
-/* header */
-.max-height
-{
-  min-height: 100vh;
-  position: relative;
-  background-color: #007892 ;
-}
-.ml4 {
-    position: relative;
-    font-weight: 900;
-    font-size: 4.5em;
-}
-.ml4 .letters {
-    position: absolute;
-    /* margin: auto; */
-    left: 0;
-    top: 0.3em;
-    right: 0;
-    opacity: 0; 
-    color: whitesmoke;
-}
-/* end of header */
 
-/* card */
-.card-content
-{
-    transition: all 0.5s ease-in-out;
+body {
+    background-color: #33344a;
+}
+
+form {
+    width: 70%;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 25px;
+    transform: translateY(-100px);
+    background-color: white;
+}
+
+.navbar-brand {
+    transform: translateX(50px);
+}
+
+.img-container {
+    border-radius: 15px;
+    transition: all .5s ease-in;
     cursor: pointer;
+    transform: translateY(-100px);
 }
-.card-content:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-/* end of card */
 
-/* testimonial */
-.car-container
-{
+.heading {
+    font-size: 1.5rem;
+}
+
+.text-container1 {
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in;
+    padding-bottom: 10px;
+    border: .5px #4a00e0 solid;
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color: white;
+    color: #4a00e0;
+    font-size: 1.2rem;
+}
+
+.text-container2 {
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in;
+    padding-bottom: 10px;
+    border: .5px #4a00e0 solid;
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color: white;
+    color: #4a00e0;
+    font-size: 1.2rem;
+}
+
+.text-container1:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.text-container2:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.form-btn {
+    
+
+
+/* border: 0;
+    outline: 0;
+    font-size: 1.2rem;
+    border-radius: 0px
+}*/
+
+
+/*
+.submit-btn {
+    border: .5px #33344a solid;
+    transition: all .4s ease;
+    font-size: 1.2rem;
+}
+
+.submit-btn:hover {
+    background-color: #5f6186;
+    color: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.studentlogin {
+    border: none;
+    outline: none;
+    border-bottom: 2px #303960 solid;
+}
+
+.spacing {
+    margin-left: 10px;
+}
+
+.marg {
+    margin-top: -150px;
+}
+
+.paragraph {
+    color: white;
+    font-size: 30px
+}
+
+.details {
+    font-size: 20px
+}
+
+.home {
     width: 100%;
-    height: 300px;
+    height: 600px;
+}
+
+@media (min-device-width: 320px) and (max-device-width: 365px) {
+    #merge_logo {
+        width: 300px;
+        height: 200px;
+    }
+    .marg {
+        margin-top: 50px;
+    }
+    .formStyle {
+        width: auto !important;
+        transform: translateY(50px);
+    }
+    .student-login,
+    .company-login {
+        padding: 20px 50px;
+        width: 100% !important;
+        transform: translateY(50px);
+        margin: 70px 0px;
+    }
+    .imageStyle {
+        padding: 0px;
+        transform: translateY(50px);
+    }
+    #image_logo {
+        width: 900px;
+        height: 520px;
+    }
+    .spacing {
+        margin: 0px 20px;
+    }
+    .studentlogin,
+    .companylogin {
+        font-size: 30px;
+    }
+    .student-login label,
+    .company-login label {
+        font-size: 38px;
+    }
+    .namef,
+    .namel {
+        margin-right: 10px;
+    }
+    .submit-btn {
+        padding: 6px 38px;
+        font-size: 35px;
+        font-family: "Quicksand";
+    }
+}
+
+@media (min-device-width: 410px) and (max-device-width: 415px) {
+    #merge_logo {
+        width: 300px;
+        height: 200px;
+    }
+    .marg {
+        margin-top: 50px;
+    }
+    .formStyle {
+        width: auto !important;
+        transform: translateY(50px);
+    }
+    .student-login,
+    .company-login {
+        padding: 20px 50px;
+        width: 100% !important;
+        transform: translateY(50px);
+        margin: 70px 0px;
+    }
+    .imageStyle {
+        padding: 0px;
+        transform: translateY(50px);
+    }
+    #image_logo {
+        width: 900px;
+        height: 520px;
+    }
+    .spacing {
+        margin: 0px 20px;
+    }
+    .studentlogin,
+    .companylogin {
+        font-size: 30px;
+    }
+    .student-login label,
+    .company-login label {
+        font-size: 38px;
+    }
+    .namef,
+    .namel {
+        margin-right: 10px;
+    }
+    .submit-btn {
+        padding: 6px 38px;
+        font-size: 35px;
+        font-family: "Quicksand";
+    }
+}
+
+@media (min-device-width: 374px) and (max-device-width: 380px) {
+    #merge_logo {
+        width: 300px;
+        height: 200px;
+    }
+    .marg {
+        margin-top: 50px;
+    }
+    .formStyle {
+        width: auto !important;
+        transform: translateY(50px);
+    }
+    .student-login,
+    .company-login {
+        padding: 20px 50px;
+        width: 100% !important;
+        transform: translateY(50px);
+        margin: 70px 0px;
+    }
+    .imageStyle {
+        padding: 0px;
+        transform: translateY(50px);
+    }
+    #image_logo {
+        width: 900px;
+        height: 520px;
+    }
+    .spacing {
+        margin: 0px 20px;
+    }
+    .studentlogin,
+    .companylogin {
+        font-size: 30px;
+    }
+    .student-login label,
+    .company-login label {
+        font-size: 38px;
+    }
+    .namef,
+    .namel {
+        margin-right: 10px;
+    }
+    .submit-btn {
+        padding: 6px 38px;
+        font-size: 35px;
+        font-family: "Quicksand";
+    }
+}
+
+@media (min-device-width: 760px) and (max-device-width: 775px) {
+    #merge_logo {
+        width: 300px;
+        height: 200px;
+    }
+    .marg {
+        margin-top: 50px;
+    }
+    .formStyle {
+        width: auto !important;
+        transform: translateY(50px);
+    }
+    .student-login,
+    .company-login {
+        padding: 20px 50px;
+        width: 100% !important;
+        transform: translateY(50px);
+        margin: 70px 0px;
+    }
+    .imageStyle {
+        padding: 0px;
+        transform: translateY(50px);
+    }
+    #image_logo {
+        width: 900px;
+        height: 520px;
+    }
+    .spacing {
+        margin: 0px 20px;
+    }
+    .studentlogin,
+    .companylogin {
+        font-size: 30px;
+    }
+    .student-login label,
+    .company-login label {
+        font-size: 38px;
+    }
+    .namef,
+    .namel {
+        margin-right: 10px;
+    }
+    .submit-btn {
+        padding: 6px 38px;
+        font-size: 35px;
+        font-family: "Quicksand";
+    }
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    outline: none !important;
+}
+
+.home {
+    width: 100%;
+    height: 700px;
+}
+
+body {
+    background-color: #33344a;
+}
+
+form {
+    width: 70%;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 25px;
+    transform: translateY(-100px);
+    background-color: white;
+}
+
+.navbar-brand {
+    transform: translateX(50px);
+}
+
+.img-container {
+    border-radius: 15px;
+    transition: all .5s ease-in;
+    cursor: pointer;
+    transform: translateY(-100px);
+}
+
+.heading {
+    font-size: 1.5rem;
+}
+
+
+/* .text-container1 {
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in;
+    padding-bottom: 10px;
+    border: .5px #4a00e0 solid;
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color: white;
+    color: #4a00e0;
+    font-size: 1.2rem;
+}
+
+.text-container2 {
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in;
+    padding-bottom: 10px;
+    border: .5px #4a00e0 solid;
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color: white;
+    color: #4a00e0;
+    font-size: 1.2rem;
+}
+
+.text-container1:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.text-container2:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+} */
+
+.form-btn {
+    /*border-bottom: 2px #4a00e0 solid;*/
+    /*transition: all .4s ease;*/
+    border: 0;
+    outline: 0;
+    font-size: 1.2rem;
+    border-radius: 0px
+}
+
+.submit-btn {
+    border: .5px #33344a solid;
+    transition: all .4s linear;
+    font-size: 1.2rem;
     border-radius: 10px;
 }
-/* end  of testimonials */
 
-/* compose */
-/* .container-form
-{
-    transform: translate(100px,100px);
-} */
-form
-{
-    width: auto;
-}
-/* end of compose */
-.middle{
-    position: absolute;
-    left:40%;
-    top: 50%;
-    font-weight: 700;
-}
-/* footer */
-.footer {
-	text-align: center;
-	bottom: 0;
-	width: 100%;
-	height: 30px;
-	background-color: #007892;
+.submit-btn:hover {
+    background-color: #5f6186;
+    color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.footer p {
-    text-align: center;
-    font-size: 1.2rem;
-    color: whitesmoke;
-} 
-/* end of footer */
-.heading{
-    transform: translateY(-50%);
-}
-.branding{
-    position: absolute;
-    left:5%;
-    top:0;
-    height: px;
+.icons {
+    padding-top: 30px;
+    cursor: pointer;
 }
 
+.facebook .instagram .linkedin .youtube .telegram {
+    transition: all .4s linear;
+    overflow: hidden;
+}
+
+.facebook:hover {
+    transform: scale(1.05);
+}
+
+.instagram:hover {
+    transform: scale(1.05);
+}
+
+.linkedin:hover {
+    transform: scale(1.05);
+}
+
+.youtube:hover {
+    transform: scale(1.05);
+}
+
+.telegram:hover {
+    transform: scale(1.05);
+}
+
+.telecontent {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.studentlogin {
+    border: none;
+    outline: none;
+    border-bottom: 2px #303960 solid;
+}
+
+.spacing {
+    margin-left: 10px;
+}
+
+.marg {
+    margin-top: -150px;
+}
+
+.paragraph {
+    color: white;
+    font-size: 30px
+}
+
+.details {
+    font-size: 20px
+}
+
+@media (min-device-width: 320px) and (max-device-width: 365px) {
+    input[type="text"] {
+        padding: 50px;
+        font-size: 40px;
+    }
+    input[type="email"] {
+        padding: 50px;
+        font-size: 40px;
+    }
+    #select {
+        margin: 6px;
+        width: 100%;
+        height: 102px;
+        padding: 4px;
+        padding-left: 50px;
+        line-height: 32px;
+        text-indent: 4px;
+        font-size: 40px;
+        margin: 6px 0px;
+    }
+    input::placeholder {
+        font-size: 35px;
+    }
+    #merge_logo {
+        width: 200px;
+        height: 200px;
+    }
+    label {
+        display: none;
+    }
+    .marg {
+        margin-top: 50px;
+    }
+    .formStyle {
+        width: auto !important;
+        transform: translateY(50px);
+    }
+    .greetStyle {
+        transform: translateY(150px);
+    }
+    .form-content {
+        padding: 10px 0px;
+    }
+    .student-login,
+    .company-login {
+        padding: 20px 50px;
+        width: 100% !important;
+        transform: translateY(50px);
+        margin: 70px 0px;
+    }
+    .imageStyle {
+        padding: 0px;
+        transform: translateY(50px);
+    }
+    #image_logo {
+        width: 900px;
+        height: 520px;
+    }
+    .spacing {
+        margin: 0px 20px;
+    }
+    .studentlogin,
+    .companylogin {
+        font-size: 30px;
+    }
+    .student-login label,
+    .company-login label {
+        font-size: 38px;
+    }
+    .namef,
+    .namel {
+        margin-right: 10px;
+    }
+    .submit-btn {
+        padding: 6px 38px;
+        font-size: 35px;
+        font-family: "Quicksand";
+    }
+}
+
+@media (min-device-width: 410px) and (max-device-width: 415px) {
+    input[type="text"] {
+        padding: 50px;
+        font-size: 40px;
+    }
+    input[type="email"] {
+        padding: 50px;
+        font-size: 40px;
+    }
+    #select {
+        margin: 6px;
+        width: 100%;
+        height: 102px;
+        padding: 4px;
+        padding-left: 50px;
+        line-height: 32px;
+        text-indent: 4px;
+        font-size: 40px;
+        margin: 6px 0px;
+    }
+    input::placeholder {
+        font-size: 35px;
+    }
+    /*input {
+        height: 50px;
+    }*/
+    #merge_logo {
+        width: 200px;
+        height: 200px;
+    }
+    label {
+        display: none;
+    }
+    .form-content {
+        padding: 10px 0px;
+    }
+    .greetStyle {
+        transform: translateY(150px);
+    }
+    .marg {
+        margin-top: 50px;
+    }
+    .formStyle {
+        width: auto !important;
+        transform: translateY(50px);
+    }
+    .student-login,
+    .company-login {
+        padding: 20px 50px;
+        width: 100% !important;
+        transform: translateY(50px);
+        margin: 70px 0px;
+    }
+    .imageStyle {
+        padding: 0px;
+        transform: translateY(50px);
+    }
+    #image_logo {
+        width: 900px;
+        height: 520px;
+    }
+    .spacing {
+        margin: 0px 20px;
+    }
+    .studentlogin,
+    .companylogin {
+        font-size: 30px;
+    }
+    .student-login label,
+    .company-login label {
+        font-size: 38px;
+    }
+    .namef,
+    .namel {
+        margin-right: 10px;
+    }
+    .submit-btn {
+        padding: 6px 38px;
+        font-size: 35px;
+        font-family: "Quicksand";
+    }
+}
+
+@media (min-device-width: 374px) and (max-device-width: 380px) {
+    input[type="text"] {
+        padding: 50px;
+        font-size: 40px;
+    }
+    input[type="email"] {
+        padding: 50px;
+        font-size: 40px;
+    }
+    #select {
+        margin: 6px;
+        width: 100%;
+        height: 102px;
+        padding: 4px;
+        padding-left: 50px;
+        line-height: 32px;
+        text-indent: 4px;
+        font-size: 40px;
+        margin: 6px 0px;
+    }
+    input::placeholder {
+        font-size: 35px;
+    }
+    /*input {
+        height: 50px;
+    }*/
+    #merge_logo {
+        width: 200px;
+        height: 200px;
+    }
+    label {
+        display: none;
+    }
+    .form-content {
+        padding: 10px 0px;
+    }
+    .greetStyle {
+        transform: translateY(150px);
+    }
+    .marg {
+        margin-top: 50px;
+    }
+    .formStyle {
+        width: auto !important;
+        transform: translateY(50px);
+    }
+    .student-login,
+    .company-login {
+        padding: 20px 50px;
+        width: 100% !important;
+        transform: translateY(50px);
+        margin: 70px 0px;
+    }
+    .imageStyle {
+        padding: 0px;
+        transform: translateY(50px);
+    }
+    #image_logo {
+        width: 900px;
+        height: 520px;
+    }
+    .spacing {
+        margin: 0px 20px;
+    }
+    .studentlogin,
+    .companylogin {
+        font-size: 30px;
+    }
+    .student-login label,
+    .company-login label {
+        font-size: 38px;
+    }
+    .namef,
+    .namel {
+        margin-right: 10px;
+    }
+    .submit-btn {
+        padding: 6px 38px;
+        font-size: 35px;
+        font-family: "Quicksand";
+    }
+}
+
+@media (min-device-width: 760px) and (max-device-width: 775px) {
+    input[type="text"] {
+        padding: 50px;
+        font-size: 40px;
+    }
+    input[type="email"] {
+        padding: 50px;
+        font-size: 40px;
+    }
+    #select {
+        margin: 6px;
+        width: 100%;
+        height: 102px;
+        padding: 4px;
+        padding-left: 50px;
+        line-height: 32px;
+        text-indent: 4px;
+        font-size: 40px;
+        margin: 6px 0px;
+    }
+    input::placeholder {
+        font-size: 35px;
+    }
+    /*input {
+        height: 50px;
+    }*/
+    #merge_logo {
+        width: 200px;
+        height: 200px;
+    }
+    label {
+        display: none;
+    }
+    .form-content {
+        padding: 10px 0px;
+    }
+    .greetStyle {
+        transform: translateY(150px);
+    }
+    .marg {
+        margin-top: 50px;
+    }
+    .formStyle {
+        width: auto !important;
+        transform: translateY(50px);
+    }
+    .student-login,
+    .company-login {
+        padding: 20px 50px;
+        width: 100% !important;
+        transform: translateY(50px);
+        margin: 70px 0px;
+    }
+    .imageStyle {
+        padding: 0px;
+        transform: translateY(50px);
+    }
+    #image_logo {
+        width: 900px;
+        height: 520px;
+    }
+    .spacing {
+        margin: 0px 20px;
+    }
+    .studentlogin,
+    .companylogin {
+        font-size: 30px;
+    }
+    .student-login label,
+    .company-login label {
+        font-size: 38px;
+    }
+    .namef,
+    .namel {
+        margin-right: 10px;
+    }
+    .submit-btn {
+        padding: 6px 38px;
+        font-size: 35px;
+        font-family: "Quicksand";
+    }
+}

@@ -1,51 +1,16 @@
-var ml4 = {};
-ml4.opacityIn = [0,1];
-ml4.scaleIn = [0.2, 1];
-ml4.scaleOut = 1;
-ml4.durationIn = 800;
-ml4.durationOut = 600;
-ml4.delay = 500;
+$(".company-login").hide();
+$('studentlogin').css({ "border-bottom": "2px #33344a solid", "color": "#33344a" });
+$('companylogin').css("border-bottom", "none");
 
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml4 .letters-1',
-    opacity: ml4.opacityIn,
-    scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-1',
-    opacity: 0,
-    scale: ml4.scaleOut,
-    duration: ml4.durationOut,
-    easing: "easeInExpo",
-    delay: ml4.delay
-  }).add({
-    targets: '.ml4 .letters-2',
-    opacity: ml4.opacityIn,
-    scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-2',
-    opacity: 0,
-    scale: ml4.scaleOut,
-    duration: ml4.durationOut,
-    easing: "easeInExpo",
-    delay: ml4.delay
-  }).add({
-    targets: '.ml4 .letters-3',
-    opacity: ml4.opacityIn,
-    scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-3',
-    opacity: 0,
-    scale: ml4.scaleOut,
-    duration: ml4.durationOut,
-    easing: "easeInExpo",
-    delay: ml4.delay
-  }).add({
-    targets: '.ml4',
-    opacity: 0,
-    duration: 500,
-    delay: 500
-  });
+$(".companylogin").click(function() {
+    $(".student-login").hide();
+    $(".company-login").show();
+    $(".studentlogin").css("border-bottom", "none");
+    $(".companylogin").css("border-bottom", "2px #33344a solid");
+});
+$(".studentlogin").click(function() {
+    $(".student-login").show();
+    $(".company-login").hide();
+    $(".companylogin").css("border-bottom", "none");
+    $(".studentlogin").css("border-bottom", "2px #33344a solid");
+});

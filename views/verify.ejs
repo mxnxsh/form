@@ -1,0 +1,47 @@
+<%- include("partials/header.ejs") %>
+    <section id="home">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-center my-5">
+                <div class="col-10 left col-lg-6 mx-auto text-center d-flex justify-content-center">
+                    <div class="img-container text-center ">
+                        <img src="/images/undraw_interview_rmcf (1).svg" width="420px" height="420px" alt="">
+                    </div>
+                </div>
+                <div class="col-10 right col-lg-6 mx-auto text-capitalize text-center d-flex justify-content-center  my-5">
+
+
+                    <form class="student-login" method="post" action="/verify" onsubmit="return validation()">
+                        <%if(result){%>
+                            <div class="alert alert-danger" role="alert">
+                                <%=result.message%>
+                            </div>
+                            <%}%>
+                                <div class="form-group text-left">
+                                    <label>OTP</label>
+                                    <input type="text" class="form-control" id="otp" placeholder="OTP" name="otp">
+                                    <span id="otps" class="text-danger font-weight-bold"> </span>
+                                </div>
+                                <button type="submit" class="btn submit-btn">Submit</button>
+
+                    </form>
+                    <script type="text/javascript">
+                        function validation() {
+                            var otp = document.getElementById('otp').value;
+
+                            if (otp == "") {
+                                document.getElementById("otps").innerHTML = "**Please enter the OTP";
+                                return false;
+                            }
+                            if (isNaN(otp)) {
+                                document.getElementById("otps").innerHTML = "**OTP must be a number";
+                                return false;
+                            }
+                            if (otp.length != 5) {
+                                document.getElementById("otps").innerHTML = "**OTP must be a 5 digit";
+                                return false;
+                            }
+
+
+                        }
+                    </script>
+                    <%- include("partials/footer.ejs") %>
